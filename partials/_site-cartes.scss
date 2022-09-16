@@ -1,0 +1,20 @@
+@use 'sass:color';
+@use 'partials/variables';
+@use 'mixins/text';
+
+.card{
+    padding: 5px;
+    margin: 5px;
+    .card__btn{
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border: none;
+        background-color: color.adjust(variables.$primary, $lightness: 15%);
+        &:hover{
+            background-color: color.adjust(variables.$primary, $lightness: 25%); 
+        }
+        color: color.complement(variables.$primary);
+        @include text.small-cap;
+    }
+}
